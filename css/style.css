@@ -1,0 +1,238 @@
+*{
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+}
+
+body{
+    overflow: scroll;
+}
+/* index */
+.index_br{
+    background-color: #eae0df;
+}
+
+.navbar-bg-93b4ea{
+    /* background-color: #68b7d8; */
+    background-color: #93b4ea;
+    /* background-color: #5d69a5; */
+    height: 100px;
+    font-size: xx-large;   
+}
+.main{
+    display: flex;
+    height: 90vh;
+    background-color: #68b6d821; 
+
+}
+.hello_text{
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+/* index_nav */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+ul.menu {
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    height: 100px;
+}
+.nav-bar{
+    display: flex;
+}
+.search-bar{
+    font-size: 20px;
+    border-radius: 12px;
+    background-color:transparent;
+    border: 2px solid #ccc;
+
+
+}
+.search-bar:hover{
+    font-size: 20px;
+    border-radius: 12px;
+    background-color:white;
+    border: 2px solid #ccc;
+
+}
+.search-btn{
+    font-size: 20px;
+    background-color:transparent;
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 12px;
+}
+.search-btn:hover{
+    font-size: 20px;
+    background-color:#7B85D4;
+    color: white;
+    border: 2px solid #7B85D4;
+    border-radius: 12px;
+}
+ ul.menu a {
+    background-color: #93b4ea;
+    color: #333;
+    display: block;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 40px;
+
+}
+ul.menu a:hover { 
+    background-color: #9E8FF6;
+    color: #fff;
+}
+.vote-option{
+    text-align: left;
+    margin-top: 10px;
+    font-size: 20px;
+}
+#vote-btn{
+    font-size: 20px;
+    background-color:transparent;
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 12px;
+    margin: 10px;
+
+}
+#cancel-btn{
+    font-size: 20px;
+    background-color:transparent;
+    color: #363636;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    margin: 10px;
+
+}
+
+/* backend */
+
+
+.backend_br{   
+    background-color:#8bdeff8c;   
+}
+.backend_main_bg{
+    margin-top: -16px;
+    background-color: #d5eeecaf;
+    height: 110vh;
+}
+
+.backend_nav_bg{
+    background-color: #8FC9E3;
+}
+ul { 
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+ul.backend_menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    height: 100px;
+}
+
+ul.backend_menu li {
+    position: relative;
+    white-space: nowrap;
+    
+}
+
+ul.backend_menu > li:last-child {
+    border-right: none;
+}
+
+ul.backend_menu > li {
+    float: left; 
+}
+
+ ul.backend_menu a {
+    background-color: #8FC9E3;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    line-height: 40px;
+
+}
+ul.backend_menu a:hover { 
+    background-color: #8BB6F0;
+    color: #fff;
+}
+ul.backend_menu li:hover > a {
+    background-color: #8BB6F0;
+    color: #fff;
+}
+ul.backend_menu ul {
+   
+    position: absolute;
+    z-index: 99;
+    /* left: -1px; */
+    /* top: 100%; */
+   min-width: 180px;
+}
+
+ul.backend_menu ul li {
+    border-bottom: #ccc 1px solid;
+}
+
+ul.backend_menu ul li:last-child {
+    border-bottom: none;
+}
+
+
+ul.backend_menu ul { 
+    display: none;
+}
+
+ul.backend_menu li:hover > ul {
+    display: block;
+}
+
+.search-bar{
+    font-size: 20px;
+    border-radius: 12px;
+    background-color:transparent;
+    border: 2px solid #ccc;
+
+}
+.search-bar:hover{
+    font-size: 20px;
+    border-radius: 12px;
+    background-color:white;
+    border: 2px solid #ccc;
+
+}
+.search-btn{
+    font-size: 20px;
+    background-color:transparent;
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 12px;
+}
+.search-btn:hover{
+    font-size: 20px;
+    background-color:#7B85D4;
+    color: white;
+    border: 2px solid #7B85D4;
+    border-radius: 12px;
+}
+/* result-list */
+
+
+
