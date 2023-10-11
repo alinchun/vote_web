@@ -1,37 +1,43 @@
-<?php
-if (isset($_GET['error'])) {
-    echo "<span style='color:red'>";
-    echo "帳號或密碼不可為空";
-    echo "</span>";
-}
-
-?>
-
 <style>
     h1 {
         text-align: center;
     }
-    .container{
+
+    .container {
         width: 400px;
     }
-    </style>
+</style>
 
+<h1>會員註冊</h1>
+<br>
 
 <div class="wrap_reg">
-    <h1>會員註冊</h1>
-    <br>
+    <div>
+        <?php
+        if (isset($_GET['error'])) {
+            if ($_GET['error'] === '2') {
+                echo "<span style='color:red'>";
+                echo "帳號格式錯誤，須為10碼數字";
+                echo "</span>";
+            } else {
+                echo "<span style='color:red'>";
+                echo "帳號或密碼不可為空";
+                echo "</span>";
+            }
+        }
+        ?>
+    </div>
     <div class="reg">
-
         <form action="./api/reg.php" method="post">
             <div class="container">
                 <div class="row g-3 align-items-center">
                     <div class="form-floating mb-3">
-                        <input type="number" name="acc" class="form-control" required placeholder="請輸入您的電話號碼" id="floatingInput acc" >
+                        <input type="number" name="acc" class="form-control" required placeholder="請輸入您的電話號碼" id="floatingInput acc">
                         <label for="floatingInput acc">帳號(請輸入您的電話號碼)</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control" id="floatingPassword pw" name="pw" placeholder="請輸入英文字母及數字組合">
-                        <label for="floatingPassword">密碼(請輸入英文字母及數字組合)</label>
+                        <label for="floatingPassword">密碼</label>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -47,13 +53,10 @@ if (isset($_GET['error'])) {
                         <label for="floatingInput email">電子郵件</label>
                     </div>
                     <div>
-
                         <input type="submit" id="edit-self-btn" class="btn btn-outline-primary" value="註冊">
                     </div>
-
                 </div>
-
-
+            </div>
         </form>
     </div>
 </div>

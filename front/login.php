@@ -10,25 +10,34 @@
 
 
 <h1>會員登入</h1>
-<?php
-if (isset($_GET['error'])) {
-    echo "<span style='color:red'>";
-    echo "帳號或密碼錯誤";
-    echo "</span>";
-}
-if (isset($_GET['msg'])) {
-    echo "<span style='color:orange'>";
-    echo $msg[$_GET['msg']];
-    echo "</span>";
-}
+<div>
+    <?php
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] === '2') {
+            echo "<span style='color:red'>";
+            echo "帳號格式錯誤，須為10碼數字";
+            echo "</span>";
+        } else {
+            echo "<span style='color:red'>";
+            echo "帳號或密碼錯誤";
+            echo "</span>";
+        }
+    }
 
-?>
+    // if (isset($_GET['msg'])) {
+    //     echo "<span style='color:orange'>";
+    //     echo $msg[$_GET['msg']];
+    //     echo "</span>";
+    // }
+
+    ?>
+</div>
 <div class="login">
     <div class="container">
         <form action="./api/login.php" method="post">
             <div class="row g-3 align-items-center">
                 <div class="form-floating mb-3">
-                    <input type="number" name="acc" class="form-control" id="floatingInput acc" placeholder="請輸入您的電話號碼"  >
+                    <input type="number" name="acc" class="form-control" id="floatingInput acc" placeholder="請輸入您的電話號碼">
                     <label for="floatingInput acc">帳號(請輸入您的電話號碼)</label>
                 </div>
                 <div class="form-floating mb-3">

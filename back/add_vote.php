@@ -12,6 +12,7 @@
         margin: 10px;
         font-size: 20px;
     }
+
     #subject,
     #open_time,
     #close_time,
@@ -64,11 +65,11 @@
 
                     <p class="time-item">
                         <label for="open_time">開放時間</label>
-                        <input type="datetime-local" name="open_time" id="open_time" >
+                        <input type="datetime-local" name="open_time" id="open_time">
                     </p>
                     <p class="time-item">
                         <label for="close_time">關閉時間</label>
-                        <input type="datetime-local" name="close_time" id="close_time" >
+                        <input type="datetime-local" name="close_time" id="close_time">
                     </p>
                     </p>
 
@@ -81,9 +82,9 @@
                     <p>
                         <label for="  login-type">限定資格</label>
 
-                        <input  type="radio" value="0" name="login" id="radio">是
+                        <input type="radio" value="0" name="login" id="radio">是
 
-                        <input  type="radio" value="1" name="login" id="radio">否
+                        <input type="radio" value="1" name="login" id="radio">否
 
                     </p>
 
@@ -97,7 +98,7 @@
                         <p>
                             <label for="description">選項</label>
                             <input type="text" name="description[]" id="description-input">
-                            <span onclick="addOption()"><img src="./image/add.png" width="30px" height="30px"></span>
+                            <span onclick="addOption(this)"><img src="./image/add.png" width="30px" height="30px"></span>
                             <span onclick="removeOption(this)"><img src="./image/minus.png" width="30px" height="30px"></span>
                         </p>
                     </div>
@@ -109,26 +110,32 @@
                 </div>
         </form>
     </div>
+    
     <script>
-        function addOption() {
+        
+        function addOption(button) {
             let opt = `<div class="options">
-            <p>
-                            <label for="description">選項</label>
-                            <input type="text" name="description[]" class="description-input" id="description-input" >
-                            <span onclick="addoption()">
-                                <img src="./image/add.png" width="30px" height="30px">
-                            </span>
-                            <span onclick="removeoption(this)">
-                                <img src="./image/minus.png" width="30px" height="30px">
-                            </span>
-                           
-                        </p>
-                        </div>`
-            $(".options").append(opt);
+        <p>
+            <label for="description">選項</label>
+            <input type="text" name="description[]" class="description-input" id="description-input">
+            <span onclick="addOption(this)">
+                <img src="./image/add.png" width="30px" height="30px">
+            </span>
+            <span onclick="removeOption(this)">
+                <img src="./image/minus.png" width="30px" height="30px">
+            </span>
+        </p>
+    </div>`;
+    $(button).parent().after(opt);
+            
+           
+           
         }
 
-        function removeOption(el) {
-            let dom = $(el).parent()
-            $(dom).remove();
+       
+        function removeOption(button) {
+            if ($(".description-input").length > 1) {
+                $(button).parent().remove();
+            }
         }
     </script>
